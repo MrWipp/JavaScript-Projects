@@ -1,23 +1,30 @@
 
 document.getElementById("button").onclick = function(){
-
+    
     let temp = document.getElementById("inputted").value;
 
-    cel_checked = document.getElementById("C").checked;
-    fah_checked = document.getElementById("F").checked;
-
-    if(cel_checked && fah_checked){
-        alert("You can only select ONE scale!")
-    }
-    else if(cel_checked){
-        document.getElementById("result").innerHTML = toCelsius(temp).toFixed(2) + " C°";
-    }
-    else if(fah_checked){
-        document.getElementById("result").innerHTML = toFahren(temp).toFixed(2) + " F°";
+    if (Number.isInteger(Number(temp))){
+        cel_checked = document.getElementById("C").checked;
+        fah_checked = document.getElementById("F").checked;
+    
+        if(cel_checked && fah_checked){
+            document.getElementById("warning").innerHTML = "Please Select One Scale Only.";
+        }
+        else if(cel_checked){
+            document.getElementById("result").innerHTML = toCelsius(temp).toFixed(2) + " C°";
+        }
+        else if(fah_checked){
+            document.getElementById("result").innerHTML = toFahren(temp).toFixed(2) + " F°";
+        }
+        else{
+            document.getElementById("warning").innerHTML = "Please Select A Scale";
+        }
     }
     else{
-        alert("Please select a scale")
+        document.getElementById("warning").innerHTML = "Please Type A Valid Temperature.";
     }
+
+
 }
 
 
