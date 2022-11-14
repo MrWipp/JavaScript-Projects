@@ -5,7 +5,6 @@ body {
     
 }
 
-
 #button {
     border-radius: 6em;
     margin: 2.5em;
@@ -18,25 +17,20 @@ body {
     animation-iteration-count: infinite;
 }
 
-
 #button:hover {
     background-color: #c7c1c1;
 }
-
-
 #button:active {
     
     background-color: #ee9b90;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
-}
-
+  }
 
 #inputted {
     border-radius: 6em;
     box-shadow: 0 0.2em #999;
 }
-
 
 #result {
     font-size: x-large;
@@ -46,7 +40,6 @@ body {
 .scales {
     margin: 1em;
 }
-
 
 .warning {
     padding-top: 2em;
